@@ -28,8 +28,8 @@ InputParameters validParams<PhaseFractionDT>()
   return params;
 }
 
-PhaseFractionDT::PhaseFractionDT(const std::string & name, InputParameters parameters) :
-    TimeStepper(name, parameters),
+PhaseFractionDT::PhaseFractionDT(const InputParameters & parameters) :
+    TimeStepper(parameters),
     PostprocessorInterface(parameters),
     _main_dt(getParam<Real>("dt")),
     _initial_dt(getParam<Real>("initial_dt")),

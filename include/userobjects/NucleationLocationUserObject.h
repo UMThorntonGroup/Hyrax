@@ -27,7 +27,7 @@ InputParameters validParams<NucleationLocationUserObject>();
 class NucleationLocationUserObject : public ElementUserObject
 {
 public:
-  NucleationLocationUserObject (const std::string & name, InputParameters parameters);
+  NucleationLocationUserObject(const InputParameters & parameters);
   virtual ~NucleationLocationUserObject() {}
 
   virtual void initialize();

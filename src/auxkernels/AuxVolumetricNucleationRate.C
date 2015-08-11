@@ -39,8 +39,8 @@ InputParameters validParams<AuxVolumetricNucleationRate>()
   return params;
 }
 
-AuxVolumetricNucleationRate::AuxVolumetricNucleationRate(const std::string & name, InputParameters parameters)
-    : AuxKernel(name, parameters),
+AuxVolumetricNucleationRate::AuxVolumetricNucleationRate(const InputParameters & parameters)
+    : AuxKernel(parameters),
       _coupled_energy(coupledValue("coupled_bulk_energy_change")),
       _Z(),
       _beta_star(),

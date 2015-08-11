@@ -22,7 +22,7 @@ InputParameters validParams<ZrHCalphad>();
 class ZrHCalphadDiffusivity : public ZrHCalphad
 {
 public:
-  ZrHCalphadDiffusivity(const std::string & name, InputParameters parameters);
+  ZrHCalphadDiffusivity(const InputParameters & parameters);
 
 protected:
   virtual void computeQpProperties();
@@ -39,10 +39,10 @@ private:
   Real _k;
   Real _mobility_CH_scaling;
 
-  MaterialProperty<Real> & _d2Galpha_dc2;
-  MaterialProperty<Real> & _d2Gdelta_dc2;
-  MaterialProperty<Real> & _d2Gdelta_dc2_precip;
-  MaterialProperty<Real> & _d2Gdelta_dc2_cutoff;
+  const MaterialProperty<Real> & _d2Galpha_dc2;
+  const MaterialProperty<Real> & _d2Gdelta_dc2;
+  const MaterialProperty<Real> & _d2Gdelta_dc2_precip;
+  const MaterialProperty<Real> & _d2Gdelta_dc2_cutoff;
 
   MaterialProperty<Real> & _D_alpha;
   MaterialProperty<Real> & _D_delta;
@@ -50,11 +50,10 @@ private:
   VariableValue & _c;
   VariableValue & _OP;
 
-  MaterialProperty<Real> & _L1Q;
+  const MaterialProperty<Real> & _L1Q;
   Real _Q_transport;
-  MaterialProperty<Real> & _d2Galpha_dcdT;
+  const MaterialProperty<Real> & _d2Galpha_dcdT;
 
 };
 
 #endif //ZRHCALPHADDIFFUSIVITY_H
-

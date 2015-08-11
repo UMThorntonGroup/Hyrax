@@ -48,8 +48,8 @@ InputParameters validParams<NucleationAuxAction>()
 }
 
 
-NucleationAuxAction::NucleationAuxAction(const std::string & name, InputParameters params) :
-    Action(name, params),
+NucleationAuxAction::NucleationAuxAction(InputParameters params) :
+    Action(params),
     _num_OPs(getParam<unsigned int>("number_OPs")),
     _OP_name_base(getParam<std::string>("OP_name_base")),
     _bulk_energy_name_base(getParam<std::string>("bulk_energy_name_base")),

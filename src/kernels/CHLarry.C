@@ -19,8 +19,8 @@ InputParameters validParams<CHLarry>()
   return params;
 }
 
-CHLarry::CHLarry(const std::string & name, InputParameters parameters)
-    :CHBulk(name, parameters),
+CHLarry::CHLarry(const InputParameters & parameters)
+    :CHBulk(parameters),
      _W(getParam<Real>("W"))
 {
 }

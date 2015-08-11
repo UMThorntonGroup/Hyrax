@@ -30,7 +30,7 @@ class CHBulkSimmons : public CHBulkCoupled
 {
 public:
 
-  CHBulkSimmons(const std::string & name, InputParameters parameters);
+  CHBulkSimmons(const InputParameters & parameters);
 
 protected:
 

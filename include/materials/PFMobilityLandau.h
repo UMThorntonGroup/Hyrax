@@ -27,8 +27,7 @@ InputParameters validParams<PFMobilityLandau>();
 class PFMobilityLandau : public Material
 {
 public:
-  PFMobilityLandau(const std::string & name,
-          InputParameters parameters);
+  PFMobilityLandau(const InputParameters & parameters);
 
 protected:
   virtual void computeProperties();

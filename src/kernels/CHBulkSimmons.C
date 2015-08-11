@@ -18,8 +18,8 @@ InputParameters validParams<CHBulkSimmons>()
   return params;
 }
 
-CHBulkSimmons::CHBulkSimmons(const std::string & name, InputParameters parameters)
-  :CHBulkCoupled(name, parameters)
+CHBulkSimmons::CHBulkSimmons(const InputParameters & parameters)
+  :CHBulkCoupled(parameters)
 {
 }
 

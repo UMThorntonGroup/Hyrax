@@ -25,8 +25,8 @@ InputParameters validParams<CHBulkPolyCoupled>()
   return params;
 }
 
-CHBulkPolyCoupled::CHBulkPolyCoupled(const std::string & name, InputParameters parameters)
-    :CHBulk(name, parameters),
+CHBulkPolyCoupled::CHBulkPolyCoupled(const InputParameters & parameters)
+    :CHBulk(parameters),
      _a1(getMaterialProperty<Real>("A1")),
      _a2(getMaterialProperty<Real>("A2")),
      _c1(getMaterialProperty<Real>("C1")),

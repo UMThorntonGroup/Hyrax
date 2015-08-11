@@ -26,8 +26,8 @@ InputParameters validParams<NucleiInformation>()
  return params;
 }
 
-NucleiInformation::NucleiInformation(const std::string & name, InputParameters parameters) :
-    GeneralPostprocessor(name, parameters),
+NucleiInformation::NucleiInformation(const InputParameters & parameters) :
+    GeneralPostprocessor(parameters),
     _nucleation_userobject(getUserObject<NucleationLocationUserObject>("nucleation_userobject")),
     _OP_number(getParam<int>("OP_number")),
     _number(0)

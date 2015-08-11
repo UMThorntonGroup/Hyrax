@@ -24,7 +24,7 @@ class NucleationAuxAction : public Action
 {
 public:
 
-  NucleationAuxAction(const std::string & name, InputParameters params);
+  NucleationAuxAction(InputParameters params);
 
   virtual void act();
 

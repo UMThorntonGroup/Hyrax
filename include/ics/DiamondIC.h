@@ -23,7 +23,7 @@ InputParameters validParams<DiamondIC>();
 class DiamondIC : public InitialCondition
 {
 public:
-  DiamondIC(const std::string & name, InputParameters parameters);
+  DiamondIC(const InputParameters & parameters);
 
   virtual Real value(const Point &p);
 

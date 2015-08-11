@@ -22,7 +22,7 @@ InputParameters validParams<AuxTemperature>();
 class AuxTemperature : public AuxKernel
 {
 public:
-  AuxTemperature(const std::string & name, InputParameters parameters);
+  AuxTemperature(const InputParameters & parameters);
 
 protected:
 

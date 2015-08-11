@@ -45,8 +45,8 @@ InputParameters validParams<AuxVolumetricFullNucleationRate>()
   return params;
 }
 
-AuxVolumetricFullNucleationRate::AuxVolumetricFullNucleationRate(const std::string & name, InputParameters parameters)
-    : AuxFullNucleationRate(name, parameters),
+AuxVolumetricFullNucleationRate::AuxVolumetricFullNucleationRate(const InputParameters & parameters)
+    : AuxFullNucleationRate(parameters),
       _rate_volume(getParam<Real>("rate_volume"))
       /*
       _mesh_dimension(_mesh.dimension()),

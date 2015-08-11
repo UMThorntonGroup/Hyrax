@@ -23,7 +23,7 @@ class Soret : public Diffusion
 {
 public:
 
-  Soret(const std::string & name, InputParameters parameters);
+  Soret(const InputParameters & parameters);
 
 protected:
 

@@ -28,7 +28,7 @@ class Value : public Kernel
 {
 public:
 
-  Value(const std::string & name, InputParameters parameters);
+  Value(const InputParameters & parameters);
 
 protected:
 

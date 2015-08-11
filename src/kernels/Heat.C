@@ -26,8 +26,8 @@ InputParameters validParams<Heat>()
 }
 
 
-Heat::Heat(const std::string & name, InputParameters parameters) :
-    Diffusion(name, parameters),
+Heat::Heat(const InputParameters & parameters) :
+    Diffusion(parameters),
     _diffusivity(getMaterialProperty<Real>("thermal_diffusivity")),
     _w_var(coupled("w")),
     _c_var(coupled("c")),

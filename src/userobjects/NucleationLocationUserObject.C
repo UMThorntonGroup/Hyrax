@@ -39,8 +39,8 @@ InputParameters validParams<NucleationLocationUserObject>()
   return params;
 }
 
-NucleationLocationUserObject::NucleationLocationUserObject(const std::string & name, InputParameters parameters) :
-    ElementUserObject(name, parameters),
+NucleationLocationUserObject::NucleationLocationUserObject(const InputParameters & parameters) :
+    ElementUserObject(parameters),
     _mesh(_subproblem.mesh()),
     //_coupled_probability(coupledValue("coupled_aux")),
     _n_coupled_aux(getParam<int>("n_coupled_aux")),

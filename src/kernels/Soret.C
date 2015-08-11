@@ -22,8 +22,8 @@ InputParameters validParams<Soret>()
 }
 
 
-Soret::Soret(const std::string & name, InputParameters parameters) :
-    Diffusion(name, parameters),
+Soret::Soret(const InputParameters & parameters) :
+    Diffusion(parameters),
     _L1Q(getMaterialProperty<Real>("L1Q")),
     _T(coupledValue("T")),
     _grad_T(coupledGradient("T"))

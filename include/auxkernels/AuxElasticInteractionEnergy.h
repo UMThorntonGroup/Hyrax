@@ -23,7 +23,7 @@ InputParameters validParams<AuxElasticInteractionEnergy>();
 class AuxElasticInteractionEnergy : public AuxKernel
 {
 public:
-    AuxElasticInteractionEnergy(const std::string & name, InputParameters parameters);
+    AuxElasticInteractionEnergy(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

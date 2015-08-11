@@ -31,7 +31,7 @@ InputParameters validParams<CHCoupledCalphad>();
 class CHCoupledCalphad : public CHBulk
 {
 public:
-  CHCoupledCalphad(const std::string & name, InputParameters parameters);
+  CHCoupledCalphad(const InputParameters & parameters);
 
 protected:
   virtual RealGradient computeGradDFDCons(PFFunctionType type);

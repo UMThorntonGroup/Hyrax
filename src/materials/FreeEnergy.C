@@ -16,8 +16,8 @@ InputParameters validParams<FreeEnergy>()
   return params;
 }
 
-FreeEnergy::FreeEnergy(const std::string & name, InputParameters parameters)
-    : Material(name, parameters),
+FreeEnergy::FreeEnergy(const InputParameters & parameters)
+    : Material(parameters),
       _length_scale(getParam<Real>("length_scale_factor")),
       _energy_scale(getParam<Real>("energy_scale_factor")),
       _kappa_c(getMaterialProperty<Real>("kappa_c")),

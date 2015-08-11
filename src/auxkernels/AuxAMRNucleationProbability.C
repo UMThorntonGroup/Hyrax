@@ -27,8 +27,8 @@ InputParameters validParams<AuxAMRNucleationProbability>()
   return params;
 }
 
-AuxAMRNucleationProbability::AuxAMRNucleationProbability(const std::string & name, InputParameters parameters)
-  : AuxKernel(name, parameters),
+AuxAMRNucleationProbability::AuxAMRNucleationProbability(const InputParameters & parameters)
+  : AuxKernel(parameters),
     _coupled_nuc_rate(coupledValue("coupled_aux_var")),
     _coupled_OP(coupledValue("coupled_variable")),
     _OP_threshold(getParam<Real>("OP_threshold")),

@@ -24,7 +24,7 @@ InputParameters validParams<AuxChemElastic>();
 class AuxChemElastic : public AuxKernel
 {
 public:
-  AuxChemElastic(const std::string & name, InputParameters parameters);
+  AuxChemElastic(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

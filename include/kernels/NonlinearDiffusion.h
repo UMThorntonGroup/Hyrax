@@ -22,7 +22,7 @@ InputParameters validParams<NonlinearDiffusion>();
 class NonlinearDiffusion : public Diffusion
 {
 public:
-  NonlinearDiffusion(const std::string & name, InputParameters parameters);
+  NonlinearDiffusion(const InputParameters & parameters);
   virtual ~NonlinearDiffusion();
 
 protected:

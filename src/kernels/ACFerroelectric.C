@@ -22,8 +22,8 @@ InputParameters validParams<ACFerroelectric>()
   return params;
 }
 
-ACFerroelectric::ACFerroelectric(const std::string & name, InputParameters parameters) :
-    ACBulk(name, parameters),
+ACFerroelectric::ACFerroelectric(const InputParameters & parameters) :
+    ACBulk(parameters),
     _a1(getMaterialProperty<Real>("a1")),
     _a11(getMaterialProperty<Real>("a11")),
     _a12(getMaterialProperty<Real>("a12")),

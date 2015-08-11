@@ -23,8 +23,8 @@ InputParameters validParams<InitialSolutionAdaptiveDT>()
   return params;
 }
 
-InitialSolutionAdaptiveDT::InitialSolutionAdaptiveDT(const std::string & name, InputParameters parameters) :
-    SolutionTimeAdaptiveDT(name, parameters),
+InitialSolutionAdaptiveDT::InitialSolutionAdaptiveDT(const InputParameters & parameters) :
+    SolutionTimeAdaptiveDT(parameters),
     _initial_dt(getParam<Real>("initial_dt")),
     _has_initial_dt(getParam<bool>("has_initial_dt")),
     _n_initial_steps(getParam<unsigned int>("n_initial_steps")),

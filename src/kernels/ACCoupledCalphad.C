@@ -26,8 +26,8 @@ InputParameters validParams<ACCoupledCalphad>()
   return params;
 }
 
-ACCoupledCalphad::ACCoupledCalphad(const std::string & name, InputParameters parameters) :
-    ACBulk(name, parameters),
+ACCoupledCalphad::ACCoupledCalphad(const InputParameters & parameters) :
+    ACBulk(parameters),
     _W(getMaterialProperty<Real>("well_height")),
     _Omega(getMaterialProperty<Real>("molar_volume")),
     _G_alpha(getMaterialProperty<Real>("G_AB1CD1")),

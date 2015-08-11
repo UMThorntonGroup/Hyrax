@@ -22,7 +22,7 @@ InputParameters validParams<CalphadEnergyMaterial>();
 class CalphadEnergyMaterial : public Material
 {
 public:
-  CalphadEnergyMaterial(const std::string & name, InputParameters parameters);
+  CalphadEnergyMaterial(const InputParameters & parameters);
 
 protected:
 

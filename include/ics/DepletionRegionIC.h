@@ -23,7 +23,7 @@ InputParameters validParams<DepletionRegionIC>();
 class DepletionRegionIC : public EllipsoidIC
 {
 public:
-  DepletionRegionIC(const std::string & name, InputParameters parameters);
+  DepletionRegionIC(const InputParameters & parameters);
 
   virtual Real value(const Point &p);
 

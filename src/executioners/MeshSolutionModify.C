@@ -32,8 +32,8 @@ InputParameters validParams<MeshSolutionModify>()
   return params;
 }
 
-MeshSolutionModify::MeshSolutionModify(const std::string & name, InputParameters parameters) :
-    Transient(name, parameters),
+MeshSolutionModify::MeshSolutionModify(const InputParameters & parameters) :
+    Transient(parameters),
     _adapt_cycles(getParam<unsigned int>("adapt_cycles")),
     _adapt_nucleus(getParam<unsigned int>("adapt_nucleus")),
     _use_nucleation_userobject(getParam<bool>("use_nucleation_userobject")),

@@ -20,8 +20,8 @@ InputParameters validParams<OneNucleusUserObject>()
 }
 
 
-OneNucleusUserObject::OneNucleusUserObject(const std::string & name, InputParameters parameters) :
-    NucleationLocationUserObject(name, parameters),
+OneNucleusUserObject::OneNucleusUserObject(const InputParameters & parameters) :
+    NucleationLocationUserObject(parameters),
     _nucleus_point(getParam<Point>("nucleus_point"))
 {
 }

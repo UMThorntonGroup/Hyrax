@@ -29,8 +29,8 @@ InputParameters validParams<CHCoupledCalphad>()
   return params;
 }
 
-CHCoupledCalphad::CHCoupledCalphad(const std::string & name, InputParameters parameters)
-    : CHBulk(name, parameters),
+CHCoupledCalphad::CHCoupledCalphad(const InputParameters & parameters)
+    : CHBulk(parameters),
       _W(getMaterialProperty<Real>("well_height")),
       _Omega(getMaterialProperty<Real>("molar_volume")),
       _dGalpha_dc(getMaterialProperty<Real>("dGAB1CD1_dc")),

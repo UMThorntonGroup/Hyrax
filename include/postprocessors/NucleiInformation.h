@@ -24,7 +24,7 @@ InputParameters validParams<NucleiInformation>();
 class NucleiInformation : public GeneralPostprocessor
 {
 public:
-  NucleiInformation(const std::string & name, InputParameters parameters);
+  NucleiInformation(const InputParameters & parameters);
 
   virtual void initialize();
   virtual void execute();

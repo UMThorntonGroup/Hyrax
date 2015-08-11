@@ -20,9 +20,8 @@ InputParameters validParams<NonlinearDiffusion>()
   return params;
 }
 
-NonlinearDiffusion::NonlinearDiffusion(const std::string & name,
-                                       InputParameters parameters)
-    :Diffusion(name, parameters),
+NonlinearDiffusion::NonlinearDiffusion(const InputParameters & parameters)
+    :Diffusion(parameters),
      _k(getParam<Real>("k"))
 {
 }

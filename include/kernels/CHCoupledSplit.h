@@ -21,7 +21,7 @@ InputParameters validParams<CHCoupledSplit>();
 class CHCoupledSplit : public SplitCHCRes
 {
 public:
-  CHCoupledSplit(const std::string & name, InputParameters parameters);
+  CHCoupledSplit(const InputParameters & parameters);
 
 protected:
   virtual Real computeDFDC(PFFunctionType type);

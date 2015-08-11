@@ -24,7 +24,7 @@ class CHPrecipMatrixElasticity : public SplitCHCRes
 {
 public:
 
-  CHPrecipMatrixElasticity(const std::string & name, InputParameters parameters);
+  CHPrecipMatrixElasticity(const InputParameters & parameters);
 
 protected:
 

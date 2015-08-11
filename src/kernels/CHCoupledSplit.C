@@ -20,8 +20,8 @@ InputParameters validParams<CHCoupledSplit>()
   return params;
 }
 
-CHCoupledSplit::CHCoupledSplit(const std::string & name, InputParameters parameters):
-    SplitCHCRes(name, parameters),
+CHCoupledSplit::CHCoupledSplit(const InputParameters & parameters):
+    SplitCHCRes(parameters),
     //   _W(getParam<Real>("Well_height"))
     // Get the material properties for the Landau coefficients
     _a1(getMaterialProperty<Real>("A1")),

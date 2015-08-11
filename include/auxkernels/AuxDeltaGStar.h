@@ -25,7 +25,7 @@ InputParameters validParams<AuxDeltaGStar>();
 class AuxDeltaGStar : public AuxKernel
 {
 public:
-  AuxDeltaGStar(const std::string & name, InputParameters parameters);
+  AuxDeltaGStar(const InputParameters & parameters);
 
 protected:
   /**

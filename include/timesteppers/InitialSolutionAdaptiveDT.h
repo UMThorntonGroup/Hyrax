@@ -21,7 +21,7 @@ InputParameters validParams<InitialSolutionAdaptiveDT>();
 class InitialSolutionAdaptiveDT : public SolutionTimeAdaptiveDT
 {
 public:
-  InitialSolutionAdaptiveDT(const std::string & name, InputParameters parameters);
+  InitialSolutionAdaptiveDT(const InputParameters & parameters);
 
 protected:
   virtual Real computeInitialDT();

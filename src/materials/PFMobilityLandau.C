@@ -37,9 +37,8 @@ InputParameters validParams<PFMobilityLandau>()
   return params;
 }
 
-PFMobilityLandau::PFMobilityLandau(const std::string & name,
-                 InputParameters parameters)
-  :Material(name, parameters),
+PFMobilityLandau::PFMobilityLandau(const InputParameters & parameters)
+  :Material(parameters),
 
    // Get the values from the input file into our temporary variable, e.g., reads from mob_CH = 1.0
    _mob_CH(getParam<Real>("mob_CH")),

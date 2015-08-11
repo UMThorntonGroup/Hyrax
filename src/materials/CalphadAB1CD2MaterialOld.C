@@ -24,8 +24,8 @@ InputParameters validParams<CalphadAB1CD2MaterialOld>()
   return params;
 }
 
-CalphadAB1CD2MaterialOld::CalphadAB1CD2MaterialOld(const std::string & name, InputParameters parameters) :
-    CalphadEnergyMaterial(name, parameters),
+CalphadAB1CD2MaterialOld::CalphadAB1CD2MaterialOld(const InputParameters & parameters) :
+    CalphadEnergyMaterial(parameters),
     _energy(),
     _low_cutoff(getParam<Real>("low_cutoff")),
     _high_cutoff(getParam<Real>("high_cutoff")),

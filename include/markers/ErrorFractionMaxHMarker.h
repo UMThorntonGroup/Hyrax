@@ -24,7 +24,7 @@ InputParameters validParams<ErrorFractionMaxHMarker>();
 class ErrorFractionMaxHMarker : public ErrorFractionMarker
 {
 public:
-  ErrorFractionMaxHMarker(const std::string & name, InputParameters parameters);
+  ErrorFractionMaxHMarker(const InputParameters & parameters);
   virtual ~ErrorFractionMaxHMarker(){};
 
 protected:

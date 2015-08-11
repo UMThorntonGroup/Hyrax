@@ -23,7 +23,7 @@ InputParameters validParams<AuxDFelDC>();
 class AuxDFelDC : public AuxKernel
 {
 public:
-    AuxDFelDC(const std::string & name, InputParameters parameters);
+    AuxDFelDC(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

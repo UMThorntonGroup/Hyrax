@@ -22,7 +22,7 @@ InputParameters validParams<CalphadAB1CD2MaterialOld>();
 class CalphadAB1CD2MaterialOld : public CalphadEnergyMaterial
 {
 public:
-  CalphadAB1CD2MaterialOld(const std::string & name, InputParameters parameters);
+  CalphadAB1CD2MaterialOld(const InputParameters & parameters);
 
 protected:
   virtual void computeQpProperties();

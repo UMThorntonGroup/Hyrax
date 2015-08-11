@@ -23,8 +23,8 @@ InputParameters validParams<AuxDeltaGStar>()
   return params;
 }
 
-AuxDeltaGStar::AuxDeltaGStar(const std::string & name, InputParameters parameters)
-  : AuxKernel(name, parameters),
+AuxDeltaGStar::AuxDeltaGStar(const InputParameters & parameters)
+  : AuxKernel(parameters),
     _mesh_dimension(_mesh.dimension()),
     _coupled_energy(coupledValue("coupled_aux_var")),
     _gamma(getParam<Real>("gamma"))

@@ -25,8 +25,8 @@ InputParameters validParams<FerroelectricBulk>()
   return params;
 }
 
-FerroelectricBulk::FerroelectricBulk(const std::string & name, InputParameters parameters) :
-    Material(name, parameters),
+FerroelectricBulk::FerroelectricBulk(const InputParameters & parameters) :
+    Material(parameters),
     _a1_i(getParam<Real>("a1")),
     _a11_i(getParam<Real>("a11")),
     _a12_i(getParam<Real>("a12")),

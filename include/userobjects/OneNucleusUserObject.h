@@ -22,7 +22,7 @@ InputParameters validParams<OneNucleusUserObject>();
 class OneNucleusUserObject : public NucleationLocationUserObject
 {
 public:
-  OneNucleusUserObject(const std::string & name, InputParameters parameters);
+  OneNucleusUserObject(const InputParameters & parameters);
   virtual ~OneNucleusUserObject() {}
 
   virtual void execute();

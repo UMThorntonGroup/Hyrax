@@ -39,7 +39,7 @@ class ACTransformElasticDF : public ACBulk
 {
 public:
 
-  ACTransformElasticDF(const std::string & name, InputParameters parameters);
+  ACTransformElasticDF(const InputParameters & parameters);
 
 protected:
 

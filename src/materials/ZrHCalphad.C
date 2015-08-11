@@ -30,8 +30,8 @@ InputParameters validParams<ZrHCalphad>()
   return params;
 }
 
-ZrHCalphad::ZrHCalphad(const std::string & name, InputParameters parameters)
-    : Material(name, parameters),
+ZrHCalphad::ZrHCalphad(const InputParameters & parameters)
+    : Material(parameters),
       _mobility_CH(getParam<Real>("mobility_CH")),
       _mobility_AC(getParam<Real>("mobility_AC")),
       _kappa_CH(getParam<Real>("kappa_CH")),

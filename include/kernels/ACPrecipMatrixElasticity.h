@@ -24,7 +24,7 @@ class ACPrecipMatrixElasticity : public ACBulk
 {
 public:
 
-  ACPrecipMatrixElasticity(const std::string & name, InputParameters parameters);
+  ACPrecipMatrixElasticity(const InputParameters & parameters);
 
 protected:
 

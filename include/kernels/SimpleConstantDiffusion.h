@@ -22,7 +22,7 @@ InputParameters validParams<SimpleConstantDiffusion>();
 class SimpleConstantDiffusion : public Diffusion
 {
 public:
-  SimpleConstantDiffusion(const std::string & name, InputParameters parameters);
+  SimpleConstantDiffusion(const InputParameters & parameters);
   virtual ~SimpleConstantDiffusion();
 
 protected:

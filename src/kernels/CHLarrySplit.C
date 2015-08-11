@@ -19,8 +19,8 @@ InputParameters validParams<CHLarrySplit>()
   return params;
 }
 
-CHLarrySplit::CHLarrySplit(const std::string & name, InputParameters parameters):
-    SplitCHCRes(name, parameters),
+CHLarrySplit::CHLarrySplit(const InputParameters & parameters):
+    SplitCHCRes(parameters),
     _W(getParam<Real>("Well_height"))
 {
 }

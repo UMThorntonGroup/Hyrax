@@ -42,8 +42,8 @@ InputParameters validParams<AuxFullNucleationRate>()
   return params;
 }
 
-AuxFullNucleationRate::AuxFullNucleationRate(const std::string & name, InputParameters parameters)
-    : AuxKernel(name, parameters),
+AuxFullNucleationRate::AuxFullNucleationRate(const InputParameters & parameters)
+    : AuxKernel(parameters),
       _mesh_dimension(_mesh.dimension()),
       _coupled_energy(coupledValue("coupled_bulk_energy_change")),
       _Z(),

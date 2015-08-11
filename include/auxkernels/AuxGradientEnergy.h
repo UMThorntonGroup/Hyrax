@@ -21,7 +21,7 @@ InputParameters validParams<AuxGradientEnergy>();
 class AuxGradientEnergy : public AuxKernel
 {
 public:
-    AuxGradientEnergy(const std::string & name, InputParameters parameters);
+    AuxGradientEnergy(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

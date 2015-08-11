@@ -21,7 +21,7 @@ InputParameters validParams<CHLarrySplit>();
 class CHLarrySplit : public SplitCHCRes
 {
 public:
-  CHLarrySplit(const std::string & name, InputParameters parameters);
+  CHLarrySplit(const InputParameters & parameters);
 
 protected:
   virtual Real computeDFDC(PFFunctionType type);

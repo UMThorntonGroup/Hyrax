@@ -22,7 +22,7 @@ InputParameters validParams<ACCoupledCalphad>();
 class ACCoupledCalphad : public ACBulk
 {
 public:
-  ACCoupledCalphad(const std::string & name, InputParameters parameters);
+  ACCoupledCalphad(const InputParameters & parameters);
 
 protected:
   virtual Real computeDFDOP(PFFunctionType type);

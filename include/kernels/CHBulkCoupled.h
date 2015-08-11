@@ -28,7 +28,7 @@ class CHBulkCoupled : public CHBulk
 {
 public:
 
-  CHBulkCoupled(const std::string & name, InputParameters parameters);
+  CHBulkCoupled(const InputParameters & parameters);
 
 protected:
 

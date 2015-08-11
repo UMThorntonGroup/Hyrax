@@ -40,9 +40,8 @@ InputParameters validParams<PolySpecifiedSmoothCircleIC>()
   return params;
 }
 
-PolySpecifiedSmoothCircleIC::PolySpecifiedSmoothCircleIC(const std::string & name,
-                                                         InputParameters parameters)
-    : InitialCondition(name, parameters),
+PolySpecifiedSmoothCircleIC::PolySpecifiedSmoothCircleIC(const InputParameters & parameters)
+    : InitialCondition(parameters),
       _n_seeds(getParam<int>("n_seeds")),
       _invalue(getParam<Real>("invalue")),
       _outvalue(getParam<Real>("outvalue")),

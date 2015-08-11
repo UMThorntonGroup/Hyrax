@@ -23,7 +23,7 @@ InputParameters validParams<EllipsoidIC>();
 class EllipsoidIC : public InitialCondition
 {
 public:
-  EllipsoidIC(const std::string & name, InputParameters parameters);
+  EllipsoidIC(const InputParameters & parameters);
 
   virtual Real value(const Point &p);
 

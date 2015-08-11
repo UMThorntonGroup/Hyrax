@@ -20,7 +20,7 @@ InputParameters validParams<CHCoupledCalphadSplit>();
 class CHCoupledCalphadSplit : public SplitCHCRes
 {
 public:
-  CHCoupledCalphadSplit(const std::string & name, InputParameters parameters);
+  CHCoupledCalphadSplit(const InputParameters & parameters);
 
 protected:
   virtual Real computeDFDC(PFFunctionType type);

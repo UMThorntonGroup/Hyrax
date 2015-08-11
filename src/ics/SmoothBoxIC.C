@@ -14,8 +14,8 @@ InputParameters validParams<SmoothBoxIC>()
 }
 
 
-SmoothBoxIC::SmoothBoxIC(const std::string & name, InputParameters parameters):
-    InitialCondition(name, parameters),
+SmoothBoxIC::SmoothBoxIC(const InputParameters & parameters):
+    InitialCondition(parameters),
     _prob_dim(getParam<int>("problem_dimension")),
     _length(getParam<Real>("length"))
 {

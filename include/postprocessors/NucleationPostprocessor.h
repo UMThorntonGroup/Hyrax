@@ -24,7 +24,7 @@ InputParameters validParams<NucleationPostprocessor>();
 class NucleationPostprocessor : public ChangeVariableData
 {
 public:
-  NucleationPostprocessor (const std::string & name, InputParameters parameters);
+  NucleationPostprocessor(const InputParameters & parameters);
 
   virtual void initialize();
 

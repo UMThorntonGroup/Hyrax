@@ -24,8 +24,8 @@ InputParameters validParams<AuxChemElastic>()
   return params;
 }
 
-AuxChemElastic::AuxChemElastic(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+AuxChemElastic::AuxChemElastic(const InputParameters & parameters) :
+    AuxKernel(parameters),
     _coupled_cons(coupledValue("coupled_conserved_var")),
     _coupled_noncons(coupledValue("coupled_nonconserved_var")),
     _precip_conserved(getParam<Real>("precip_conserved")),

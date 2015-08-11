@@ -28,7 +28,7 @@ InputParameters validParams<CHBulkPolyCoupled>();
 class CHBulkPolyCoupled : public CHBulk
 {
 public:
-  CHBulkPolyCoupled(const std::string & name, InputParameters parameters);
+  CHBulkPolyCoupled(const InputParameters & parameters);
 
 protected:
   virtual RealGradient computeGradDFDCons(PFFunctionType type);

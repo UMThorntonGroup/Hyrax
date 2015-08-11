@@ -31,8 +31,8 @@ InputParameters validParams<ZrHCalphadDiffusivity>()
   return params;
 }
 
-ZrHCalphadDiffusivity::ZrHCalphadDiffusivity(const std::string & name, InputParameters parameters)
-    : ZrHCalphad(name, parameters),
+ZrHCalphadDiffusivity::ZrHCalphadDiffusivity(const InputParameters & parameters)
+    : ZrHCalphad(parameters),
 
       _H_Zr_D0(getParam<Real>("H_Zr_D0")),
       _H_ZrH2_D0(getParam<Real>("H_ZrH2_D0")),
