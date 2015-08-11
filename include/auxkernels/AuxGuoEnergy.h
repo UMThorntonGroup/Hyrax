@@ -24,7 +24,7 @@ InputParameters validParams<AuxGuoEnergy>();
 class AuxGuoEnergy : public AuxChemElastic
 {
 public:
-  AuxGuoEnergy(const std::string & name, InputParameters parameters);
+  AuxGuoEnergy(const InputParameters & parameters);
 
 protected:
   // virtual Real computeValue();

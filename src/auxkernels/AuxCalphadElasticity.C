@@ -32,8 +32,8 @@ InputParameters validParams<AuxCalphadElasticity>()
   return params;
 }
 
-AuxCalphadElasticity::AuxCalphadElasticity(const std::string & name, InputParameters parameters) :
-  AuxKernel(name, parameters),
+AuxCalphadElasticity::AuxCalphadElasticity(const InputParameters & parameters) :
+  AuxKernel(parameters),
   _precip_cons(getParam<Real>("precip_conserved")),
   _precip_noncons(getParam<Real>("precip_nonconserved")),
   _self_energy(getParam<Real>("self_energy")),

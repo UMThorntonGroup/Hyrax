@@ -22,7 +22,7 @@ InputParameters validParams<ACFerroelectric>();
 class ACFerroelectric : public ACBulk
 {
 public:
-  ACFerroelectric(const std::string & name, InputParameters parameters);
+  ACFerroelectric(const InputParameters & parameters);
 
 protected:
   virtual Real computeDFDOP(PFFunctionType type);

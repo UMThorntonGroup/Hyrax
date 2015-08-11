@@ -26,8 +26,8 @@ InputParameters validParams<AuxGuoEnergy>()
   return params;
 }
 
-AuxGuoEnergy::AuxGuoEnergy(const std::string & name, InputParameters parameters) :
-    AuxChemElastic(name, parameters),
+AuxGuoEnergy::AuxGuoEnergy(const InputParameters & parameters) :
+    AuxChemElastic(parameters),
 /*
     _coupled_cons(coupledValue("coupled_conserved_var")),
     _coupled_noncons(coupledValue("coupled_nonconserved_var")),

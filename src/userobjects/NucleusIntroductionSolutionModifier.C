@@ -27,9 +27,8 @@ InputParameters validParams<NucleusIntroductionSolutionModifier>()
   return params;
 }
 
-NucleusIntroductionSolutionModifier::NucleusIntroductionSolutionModifier(const std::string & name,
-                                                                         InputParameters parameters) :
-    GeneralUserObject(name, parameters),
+NucleusIntroductionSolutionModifier::NucleusIntroductionSolutionModifier(const InputParameters & parameters) :
+    GeneralUserObject(parameters),
     _nucleation_userobject(getUserObject<NucleationLocationUserObject>("nucleation_userobject")),
     _mesh(_subproblem.mesh()),
     _nl(static_cast<FEProblem &>(_subproblem).getNonlinearSystem()),

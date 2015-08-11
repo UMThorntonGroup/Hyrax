@@ -23,7 +23,7 @@ class Heat : public Diffusion
 {
 public:
 
-  Heat(const std::string & name, InputParameters parameters);
+  Heat(const InputParameters & parameters);
 
 protected:
 

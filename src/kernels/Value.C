@@ -18,8 +18,8 @@ InputParameters validParams<Value>()
   return params;
 }
 
-Value::Value(const std::string & name, InputParameters parameters)
-    : Kernel(name, parameters)
+Value::Value(const InputParameters & parameters)
+    : Kernel(parameters)
 {
 }
 

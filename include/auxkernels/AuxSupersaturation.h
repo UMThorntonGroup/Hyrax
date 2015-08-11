@@ -27,7 +27,7 @@ InputParameters validParams<AuxSupersaturation>();
 class AuxSupersaturation : public AuxKernel
 {
 public:
-  AuxSupersaturation(const std::string & name, InputParameters parameters);
+  AuxSupersaturation(const InputParameters & parameters);
 
 protected:
 

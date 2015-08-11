@@ -27,8 +27,8 @@ InputParameters validParams<StressBC>()
     return params;
 }
 
-StressBC::StressBC(const std::string & name, InputParameters parameters) :
-    IntegratedBC(name, parameters),
+StressBC::StressBC(const InputParameters & parameters) :
+    IntegratedBC(parameters),
     _stress_vector(getParam<std::vector<Real> >("boundary_stress")),
     _Jacobian_mult(getMaterialProperty<ElasticityTensorR4>("Jacobian_mult")),
     _component(getParam<int>("component")),

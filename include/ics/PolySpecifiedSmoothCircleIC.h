@@ -28,7 +28,7 @@ InputParameters validParams<PolySpecifiedSmoothCircleIC>();
 class PolySpecifiedSmoothCircleIC : public InitialCondition
 {
 public:
-  PolySpecifiedSmoothCircleIC(const std::string & name, InputParameters parameters);
+  PolySpecifiedSmoothCircleIC(const InputParameters & parameters);
 
   virtual Real value(const Point &p);
 

@@ -29,8 +29,8 @@ InputParameters validParams<AuxCalphadEnergy>()
   return params;
 }
 
-AuxCalphadEnergy::AuxCalphadEnergy(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+AuxCalphadEnergy::AuxCalphadEnergy(const InputParameters & parameters) :
+    AuxKernel(parameters),
     _precip_cons(getParam<Real>("precip_conserved")),
     _precip_noncons(getParam<Real>("precip_nonconserved")),
 

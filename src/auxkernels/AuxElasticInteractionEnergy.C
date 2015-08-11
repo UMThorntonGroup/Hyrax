@@ -22,8 +22,8 @@ InputParameters validParams<AuxElasticInteractionEnergy>()
   return params;
 }
 
-AuxElasticInteractionEnergy::AuxElasticInteractionEnergy(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+AuxElasticInteractionEnergy::AuxElasticInteractionEnergy(const InputParameters & parameters) :
+    AuxKernel(parameters),
     _stress(getMaterialProperty<RankTwoTensor>("stress")),
     _precipitate_eigenstrain(getMaterialProperty<std::vector<RankTwoTensor> >("precipitate_eigenstrain")),
     _OP_number(getParam<int>("OP_number"))

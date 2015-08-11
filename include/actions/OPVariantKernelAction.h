@@ -25,7 +25,7 @@ class OPVariantKernelAction : public Action
 {
 public:
 
-  OPVariantKernelAction(const std::string & name, InputParameters params);
+  OPVariantKernelAction(InputParameters params);
 
   virtual void act();
 

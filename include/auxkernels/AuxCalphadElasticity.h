@@ -29,7 +29,7 @@ InputParameters validParams<AuxCalphadElasticity>();
 class AuxCalphadElasticity : public AuxKernel
 {
 public:
-  AuxCalphadElasticity(const std::string & name, InputParameters parameters);
+  AuxCalphadElasticity(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

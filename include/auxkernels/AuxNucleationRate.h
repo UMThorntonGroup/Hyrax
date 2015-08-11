@@ -26,7 +26,7 @@ InputParameters validParams<AuxNucleationRate>();
 class AuxNucleationRate : public AuxKernel
 {
 public:
-  AuxNucleationRate(const std::string & name, InputParameters parameters);
+  AuxNucleationRate(const InputParameters & parameters);
 
 protected:
   /**

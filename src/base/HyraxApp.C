@@ -136,8 +136,8 @@ InputParameters validParams<HyraxApp>()
   return params;
 }
 
-HyraxApp::HyraxApp(const std::string & name, InputParameters parameters) :
-    MooseApp(name, parameters)
+HyraxApp::HyraxApp(InputParameters parameters) :
+    MooseApp(parameters)
 {
   Moose::registerObjects(_factory);
   HyraxApp::registerObjects(_factory);

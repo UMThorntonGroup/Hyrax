@@ -24,7 +24,7 @@ InputParameters validParams<NucleusIntroductionSolutionModifier>();
 class NucleusIntroductionSolutionModifier : public GeneralUserObject
 {
 public:
-  NucleusIntroductionSolutionModifier (const std::string & name, InputParameters parameters);
+  NucleusIntroductionSolutionModifier(const InputParameters & parameters);
   virtual ~NucleusIntroductionSolutionModifier() {}
 
   virtual void initialize();

@@ -46,8 +46,8 @@ InputParameters validParams<NucleationPostprocessor>()
   return params;
 }
 
-NucleationPostprocessor::NucleationPostprocessor(const std::string & name, InputParameters parameters) :
-    ChangeVariableData(name, parameters),
+NucleationPostprocessor::NucleationPostprocessor(const InputParameters & parameters) :
+    ChangeVariableData(parameters),
     _coupled(_subproblem.getVariable(0, getParam<std::string>("coupled_aux"))),
     _radius(getParam<Real>("radius")),
     _dwell_time(getParam<Real>("dwell_time")),

@@ -23,8 +23,8 @@ InputParameters validParams<AuxSupersaturation>()
   return params;
 }
 
-AuxSupersaturation::AuxSupersaturation(const std::string & name, InputParameters parameters)
-  : AuxKernel(name, parameters),
+AuxSupersaturation::AuxSupersaturation(const InputParameters & parameters)
+  : AuxKernel(parameters),
   _coupled_conc(coupledValue("coupled_var")),
   _c1(getParam<Real>("functional_c1"))
 {

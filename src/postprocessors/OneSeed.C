@@ -38,8 +38,8 @@ InputParameters validParams<OneSeed>()
   return params;
 }
 
-OneSeed::OneSeed(const std::string & name, InputParameters parameters) :
-    ChangeVariableData(name, parameters),
+OneSeed::OneSeed(const InputParameters & parameters) :
+    ChangeVariableData(parameters),
     _radius(getParam<Real>("radius")),
     _dwell_time(getParam<Real>("dwell_time")),
     _seed_value(getParam<Real>("seed_value")),

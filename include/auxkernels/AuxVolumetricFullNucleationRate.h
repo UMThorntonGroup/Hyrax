@@ -21,7 +21,7 @@ InputParameters validParams<AuxVolumetricFullNucleationRate>();
 class AuxVolumetricFullNucleationRate : public AuxFullNucleationRate
 {
 public:
-  AuxVolumetricFullNucleationRate(const std::string & name, InputParameters parameters);
+  AuxVolumetricFullNucleationRate(const InputParameters & parameters);
 
 protected:
 

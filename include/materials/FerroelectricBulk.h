@@ -22,7 +22,7 @@ InputParameters validParams<FerroelectricBulk>();
 class FerroelectricBulk : public Material
 {
 public:
-  FerroelectricBulk(const std::string & name, InputParameters parameters);
+  FerroelectricBulk(const InputParameters & parameters);
 
 protected:
   virtual void computeQpProperties();

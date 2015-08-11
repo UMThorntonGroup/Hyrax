@@ -18,8 +18,8 @@ InputParameters validParams<ElementIntegralFreeEnergy>()
   return params;
 }
 
-ElementIntegralFreeEnergy::ElementIntegralFreeEnergy(const std::string & name, InputParameters parameters) :
-    ElementIntegralPostprocessor(name, parameters),
+ElementIntegralFreeEnergy::ElementIntegralFreeEnergy(const InputParameters & parameters) :
+    ElementIntegralPostprocessor(parameters),
     _phase1_energy(getMaterialProperty<Real>(getParam<std::string>("phase1_energy"))),
     _phase2_energy(getMaterialProperty<Real>(getParam<std::string>("phase2_energy"))),
     _grad_OP_term(getMaterialProperty<Real>(getParam<std::string>("grad_OP_matprop"))),

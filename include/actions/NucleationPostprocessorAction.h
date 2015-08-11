@@ -24,7 +24,7 @@ class NucleationPostprocessorAction : public Action
 {
 public:
 
-  NucleationPostprocessorAction(const std::string & name, InputParameters params);
+  NucleationPostprocessorAction(InputParameters params);
 
   virtual void act();
 

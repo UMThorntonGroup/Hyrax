@@ -27,8 +27,8 @@ InputParameters validParams<SplitCoupledCHWRes>()
   return params;
 }
 
-SplitCoupledCHWRes::SplitCoupledCHWRes(const std::string & name, InputParameters parameters) :
-    SplitCHWRes(name, parameters),
+SplitCoupledCHWRes::SplitCoupledCHWRes(const InputParameters & parameters) :
+    SplitCHWRes(parameters),
     _mob_name(getParam<std::string>("mob_name")),
     _mob(getMaterialProperty<Real>(_mob_name)),
 //  This _c_var is needed to compute off-diagonal Jacobian.

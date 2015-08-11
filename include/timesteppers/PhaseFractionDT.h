@@ -24,7 +24,7 @@ class PhaseFractionDT :
   public PostprocessorInterface
 {
 public:
-  PhaseFractionDT(const std::string & name, InputParameters parameters);
+  PhaseFractionDT(const InputParameters & parameters);
 
 protected:
   virtual Real computeInitialDT();

@@ -32,8 +32,8 @@ InputParameters validParams<EllipsoidIC>()
   return params;
 }
 
-EllipsoidIC::EllipsoidIC(const std::string & name, InputParameters parameters)
-    : InitialCondition(name, parameters),
+EllipsoidIC::EllipsoidIC(const InputParameters & parameters)
+    : InitialCondition(parameters),
       _n_seeds(getParam<int>("n_seeds")),
       _int_width(getParam<Real>("int_width")),
       _invalue(getParam<Real>("invalue")),

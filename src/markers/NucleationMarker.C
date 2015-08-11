@@ -25,8 +25,8 @@ InputParameters validParams<NucleationMarker>()
   return params;
 }
 
-NucleationMarker::NucleationMarker(const std::string & name, InputParameters parameters) :
-    Marker(name, parameters),
+NucleationMarker::NucleationMarker(const InputParameters & parameters) :
+    Marker(parameters),
     _nucleation_userobject(getUserObject<NucleationLocationUserObject>("nucleation_userobject")),
     _max_h_level(getParam<unsigned int>("max_h_level"))
 {

@@ -22,8 +22,8 @@ InputParameters validParams<ReporterAux>()
   return params;
 }
 
-ReporterAux::ReporterAux(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+ReporterAux::ReporterAux(const InputParameters & parameters) :
+    AuxKernel(parameters),
     _coupled_val(coupledValue("coupled"))
 {
 }

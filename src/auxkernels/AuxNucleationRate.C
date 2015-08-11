@@ -30,8 +30,8 @@ InputParameters validParams<AuxNucleationRate>()
   return params;
 }
 
-AuxNucleationRate::AuxNucleationRate(const std::string & name, InputParameters parameters)
-  : AuxKernel(name, parameters),
+AuxNucleationRate::AuxNucleationRate(const InputParameters & parameters)
+  : AuxKernel(parameters),
     _mesh_dimension(_mesh.dimension()),
     _coupled_energy(coupledValue("coupled_aux_var")),
     _Z(getParam<Real>("Z")),

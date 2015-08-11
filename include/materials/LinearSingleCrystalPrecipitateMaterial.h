@@ -32,7 +32,7 @@ InputParameters validParams<LinearSingleCrystalPrecipitateMaterial>();
 class LinearSingleCrystalPrecipitateMaterial : public TensorMechanicsMaterial //LinearElasticMaterial
 {
 public:
-  LinearSingleCrystalPrecipitateMaterial(const std::string & name, InputParameters parameters);
+  LinearSingleCrystalPrecipitateMaterial(const InputParameters & parameters);
 
 protected:
   virtual void computeProperties();

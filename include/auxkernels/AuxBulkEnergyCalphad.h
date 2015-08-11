@@ -23,7 +23,7 @@ InputParameters validParams<AuxBulkEnergyCalphad>();
 class AuxBulkEnergyCalphad : public AuxKernel
 {
 public:
-  AuxBulkEnergyCalphad(const std::string & name, InputParameters parameters);
+  AuxBulkEnergyCalphad(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

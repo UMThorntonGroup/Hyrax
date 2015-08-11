@@ -22,7 +22,7 @@ InputParameters validParams<PrecipitateMatrixMisfitMaterial>();
 class PrecipitateMatrixMisfitMaterial : public LinearSingleCrystalPrecipitateMaterial
 {
 public:
-  PrecipitateMatrixMisfitMaterial(const std::string & name, InputParameters parameters);
+  PrecipitateMatrixMisfitMaterial(const InputParameters & parameters);
 
 protected:
   virtual void computeProperties();

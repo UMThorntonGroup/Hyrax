@@ -30,8 +30,8 @@ InputParameters validParams<ChangeVariableData>()
   return params;
 }
 
-ChangeVariableData::ChangeVariableData(const std::string & name, InputParameters parameters) :
-    GeneralPostprocessor(name, parameters),
+ChangeVariableData::ChangeVariableData(const InputParameters & parameters) :
+    GeneralPostprocessor(parameters),
     _mesh(_subproblem.mesh()),
     _nl(static_cast<FEProblem &>(_subproblem).getNonlinearSystem())//,
 //    _coupled(_subproblem.getVariable(0, getParam<std::string>("coupled_aux")))

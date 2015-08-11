@@ -28,7 +28,7 @@ class ACBulkSimmons : public ACBulkCoupled
 {
 public:
 
-  ACBulkSimmons(const std::string & name, InputParameters parameters);
+  ACBulkSimmons(const InputParameters & parameters);
 
 protected:
 

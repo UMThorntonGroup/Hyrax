@@ -20,8 +20,8 @@ InputParameters validParams<AuxTemperature>()
   return params;
 }
 
-AuxTemperature::AuxTemperature(const std::string & name, InputParameters parameters)
-    : AuxKernel(name, parameters),
+AuxTemperature::AuxTemperature(const InputParameters & parameters)
+    : AuxKernel(parameters),
       _T(getParam<Real>("temp_in_K"))
 {
   _console << "AuxTemperature constructor"<<std::endl;

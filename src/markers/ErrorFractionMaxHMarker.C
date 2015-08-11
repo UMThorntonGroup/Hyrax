@@ -24,8 +24,8 @@ InputParameters validParams<ErrorFractionMaxHMarker>()
 }
 
 
-ErrorFractionMaxHMarker::ErrorFractionMaxHMarker(const std::string & name, InputParameters parameters) :
-    ErrorFractionMarker(name, parameters),
+ErrorFractionMaxHMarker::ErrorFractionMaxHMarker(const InputParameters & parameters) :
+    ErrorFractionMarker(parameters),
     _max_h_level(getParam<unsigned int>("max_h_level"))
 {
 }

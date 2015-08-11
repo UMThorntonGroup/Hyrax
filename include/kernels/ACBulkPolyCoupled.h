@@ -28,7 +28,7 @@ InputParameters validParams<ACBulkPolyCoupled>();
 class ACBulkPolyCoupled : public ACBulkCoupled
 {
 public:
-  ACBulkPolyCoupled(const std::string & name, InputParameters parameters);
+  ACBulkPolyCoupled(const InputParameters & parameters);
 
 protected:
   virtual Real computeDFDOP(PFFunctionType type);

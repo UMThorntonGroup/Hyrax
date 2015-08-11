@@ -25,7 +25,7 @@ InputParameters validParams<ChangeVariableData>();
 class ChangeVariableData : public GeneralPostprocessor
 {
 public:
-  ChangeVariableData(const std::string & name, InputParameters parameters);
+  ChangeVariableData(const InputParameters & parameters);
 
   virtual void initialize();
   virtual void execute();

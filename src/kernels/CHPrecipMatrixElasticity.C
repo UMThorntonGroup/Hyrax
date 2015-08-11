@@ -26,8 +26,8 @@ InputParameters validParams<CHPrecipMatrixElasticity>()
   return params;
 }
 
-CHPrecipMatrixElasticity::CHPrecipMatrixElasticity(const std::string & name, InputParameters parameters)
-    : SplitCHCRes(name, parameters),
+CHPrecipMatrixElasticity::CHPrecipMatrixElasticity(const InputParameters & parameters)
+    : SplitCHCRes(parameters),
       _elasticity_tensor(getMaterialProperty<ElasticityTensorR4>("elasticity_tensor")),
       _dn_elasticity_tensor(getMaterialProperty<std::vector<ElasticityTensorR4> >("dn_elasticity_tensor")),
       _elastic_strain(getMaterialProperty<RankTwoTensor>("elastic_strain")),

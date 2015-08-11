@@ -27,7 +27,7 @@ InputParameters validParams<AuxCalphadEnergy>();
 class AuxCalphadEnergy : public AuxKernel
 {
 public:
-  AuxCalphadEnergy(const std::string & name, InputParameters parameters);
+  AuxCalphadEnergy(const InputParameters & parameters);
 
 protected:
    virtual Real computeValue();

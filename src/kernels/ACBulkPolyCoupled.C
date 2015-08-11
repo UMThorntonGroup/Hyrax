@@ -29,8 +29,8 @@ InputParameters validParams<ACBulkPolyCoupled>()
   return params;
 }
 
-ACBulkPolyCoupled::ACBulkPolyCoupled(const std::string & name, InputParameters parameters)
-    : ACBulkCoupled(name, parameters),
+ACBulkPolyCoupled::ACBulkPolyCoupled(const InputParameters & parameters)
+    : ACBulkCoupled(parameters),
       _n_OP_vars(getParam<int>("n_OP_vars")),
       _OP_number(getParam<int>("OP_number")),
       _a5(getMaterialProperty<Real>("A5")),

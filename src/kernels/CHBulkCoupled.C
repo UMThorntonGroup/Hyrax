@@ -24,8 +24,8 @@ InputParameters validParams<CHBulkCoupled>()
   return params;
 }
 
-CHBulkCoupled::CHBulkCoupled(const std::string & name, InputParameters parameters)
-  :CHBulk(name, parameters),
+CHBulkCoupled::CHBulkCoupled(const InputParameters & parameters)
+  :CHBulk(parameters),
    // Get the material properties for the Landau coefficients
    _a1(getMaterialProperty<Real>("A1")),
    _a2(getMaterialProperty<Real>("A2")),

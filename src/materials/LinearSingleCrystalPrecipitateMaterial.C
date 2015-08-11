@@ -40,8 +40,8 @@ InputParameters validParams<LinearSingleCrystalPrecipitateMaterial>()
   return params;
 }
 
-LinearSingleCrystalPrecipitateMaterial::LinearSingleCrystalPrecipitateMaterial(const std::string & name, InputParameters parameters) :
-    TensorMechanicsMaterial(name, parameters),
+LinearSingleCrystalPrecipitateMaterial::LinearSingleCrystalPrecipitateMaterial(const InputParameters & parameters) :
+    TensorMechanicsMaterial(parameters),
     _eigenstrain_vector(getParam<std::vector<Real> >("e_precipitate")),
     _scaling_factor(getParam<Real>("scaling_factor")),
 

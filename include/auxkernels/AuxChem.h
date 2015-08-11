@@ -22,7 +22,7 @@ InputParameters validParams<AuxChem>();
 class AuxChem : public AuxKernel
 {
 public:
-  AuxChem(const std::string & name, InputParameters parameters);
+  AuxChem(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

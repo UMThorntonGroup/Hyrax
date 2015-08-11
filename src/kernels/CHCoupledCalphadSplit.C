@@ -26,8 +26,8 @@ InputParameters validParams<CHCoupledCalphadSplit>()
   return params;
 }
 
-CHCoupledCalphadSplit::CHCoupledCalphadSplit(const std::string & name, InputParameters parameters) :
-    SplitCHCRes(name, parameters),
+CHCoupledCalphadSplit::CHCoupledCalphadSplit(const InputParameters & parameters) :
+    SplitCHCRes(parameters),
     _W(getMaterialProperty<Real>("well_height")),
     _Omega(getMaterialProperty<Real>("molar_volume")),
     _dGalpha_dc(getMaterialProperty<Real>("dGAB1CD1_dc")),

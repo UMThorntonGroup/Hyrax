@@ -22,7 +22,7 @@ InputParameters validParams<ZrHCalphad>();
 class ZrHCalphad : public Material
 {
 public:
-  ZrHCalphad(const std::string & name, InputParameters parameters);
+  ZrHCalphad(const InputParameters & parameters);
 
 protected:
   virtual void computeQpProperties();

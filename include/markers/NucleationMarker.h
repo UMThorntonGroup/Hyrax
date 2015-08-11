@@ -26,7 +26,7 @@ InputParameters validParams<NucleationMarker>();
 class NucleationMarker : public Marker
 {
 public:
-  NucleationMarker(const std::string & name, InputParameters parameters);
+  NucleationMarker(const InputParameters & parameters);
   virtual  ~NucleationMarker() {}
 
 protected:

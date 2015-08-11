@@ -27,7 +27,7 @@ class MeshSolutionModify: public Transient
 {
 public:
 
-  MeshSolutionModify(const std::string & name, InputParameters parameters);
+  MeshSolutionModify(const InputParameters & parameters);
 
 //  virtual void takeStep(Real input_dt = -1.0);
   virtual void endStep(Real input_time = -1.0);

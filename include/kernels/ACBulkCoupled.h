@@ -28,7 +28,7 @@ class ACBulkCoupled : public ACBulk
 {
 public:
 
-  ACBulkCoupled(const std::string & name, InputParameters parameters);
+  ACBulkCoupled(const InputParameters & parameters);
 
 protected:
 

@@ -24,8 +24,8 @@ InputParameters validParams<AuxChem>()
   return params;
 }
 
-AuxChem::AuxChem(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+AuxChem::AuxChem(const InputParameters & parameters) :
+    AuxKernel(parameters),
     _coupled_cons(coupledValue("coupled_conserved_var")),
     _coupled_noncons(coupledValue("coupled_nonconserved_var")),
     _precip_conserved(getParam<Real>("precip_conserved")),

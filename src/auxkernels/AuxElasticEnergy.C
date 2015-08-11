@@ -21,8 +21,8 @@ InputParameters validParams<AuxElasticEnergy>()
   return params;
 }
 
-AuxElasticEnergy::AuxElasticEnergy(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+AuxElasticEnergy::AuxElasticEnergy(const InputParameters & parameters) :
+    AuxKernel(parameters),
     _elasticity_tensor(getMaterialProperty<ElasticityTensorR4>("elasticity_tensor")),
     _elastic_strain(getMaterialProperty<RankTwoTensor>("elastic_strain"))//,
     //_scaling_factor(getParam<Real>("scaling_factor"))

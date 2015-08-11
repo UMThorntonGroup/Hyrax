@@ -24,8 +24,8 @@ InputParameters validParams<DepletionRegionIC>()
   return params;
 }
 
-DepletionRegionIC::DepletionRegionIC(const std::string & name, InputParameters parameters)
-    : EllipsoidIC(name, parameters),
+DepletionRegionIC::DepletionRegionIC(const InputParameters & parameters)
+    : EllipsoidIC(parameters),
       _depletion_width(getParam<Real>("depletion_width")),
       _depletion_outvalue(getParam<Real>("depletion_outvalue"))
 {

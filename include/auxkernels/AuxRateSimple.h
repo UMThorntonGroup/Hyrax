@@ -26,7 +26,7 @@ InputParameters validParams<AuxRateSimple>();
 class AuxRateSimple : public AuxKernel
 {
 public:
-  AuxRateSimple(const std::string & name, InputParameters parameters);
+  AuxRateSimple(const InputParameters & parameters);
 
 protected:
   /**

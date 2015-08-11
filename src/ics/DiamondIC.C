@@ -27,8 +27,8 @@ InputParameters validParams<DiamondIC>()
   return params;
 }
 
-DiamondIC::DiamondIC(const std::string & name, InputParameters parameters)
-    : InitialCondition(name, parameters),
+DiamondIC::DiamondIC(const InputParameters & parameters)
+    : InitialCondition(parameters),
       _invalue(getParam<Real>("invalue")),
       _outvalue(getParam<Real>("outvalue")),
       _radius(getParam<Real>("radius")),

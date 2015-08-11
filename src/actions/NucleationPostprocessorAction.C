@@ -29,8 +29,8 @@ InputParameters validParams<NucleationPostprocessorAction>()
   return params;
 }
 
-NucleationPostprocessorAction::NucleationPostprocessorAction(const std::string & name, InputParameters params) :
-    Action(name, params),
+NucleationPostprocessorAction::NucleationPostprocessorAction(InputParameters params) :
+    Action(params),
     _num_OPs(getParam<int>("num_OPs")),
     _OP_name_base(getParam<std::string>("OP_name_base")),
     _particle_volume_name_base(getParam<FileName>("particle_volume_name_base")),

@@ -20,9 +20,8 @@ InputParameters validParams<SimpleConstantDiffusion>()
   return params;
 }
 
-SimpleConstantDiffusion::SimpleConstantDiffusion(const std::string & name,
-                                                 InputParameters parameters)
-    :Diffusion(name, parameters),
+SimpleConstantDiffusion::SimpleConstantDiffusion(const InputParameters & parameters)
+    :Diffusion(parameters),
      _k(getParam<Real>("k"))
 {
 }

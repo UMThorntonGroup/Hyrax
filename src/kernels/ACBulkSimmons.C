@@ -17,8 +17,8 @@ InputParameters validParams<ACBulkSimmons>()
   return params;
 }
 
-ACBulkSimmons::ACBulkSimmons(const std::string & name, InputParameters parameters)
-  :ACBulkCoupled(name, parameters)
+ACBulkSimmons::ACBulkSimmons(const InputParameters & parameters)
+  :ACBulkCoupled(parameters)
 {
 }
 

@@ -23,7 +23,7 @@ InputParameters validParams<OneSeed>();
 class OneSeed : public ChangeVariableData
 {
 public:
-  OneSeed (const std::string & name, InputParameters parameters);
+  OneSeed(const InputParameters & parameters);
 
   virtual void initialize();
 

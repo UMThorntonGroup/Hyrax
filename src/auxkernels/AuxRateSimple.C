@@ -29,8 +29,8 @@ InputParameters validParams<AuxRateSimple>()
   return params;
 }
 
-AuxRateSimple::AuxRateSimple(const std::string & name, InputParameters parameters)
-  : AuxKernel(name, parameters),
+AuxRateSimple::AuxRateSimple(const InputParameters & parameters)
+  : AuxKernel(parameters),
     _mesh_dimension(_mesh.dimension()),
     _coupled_energy(coupledValue("coupled_aux_var")),
     _Kn1(getParam<Real>("Kn1")),

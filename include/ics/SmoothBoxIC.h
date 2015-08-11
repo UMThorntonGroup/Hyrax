@@ -14,8 +14,7 @@ class SmoothBoxIC : public InitialCondition
 {
 public:
 
-  SmoothBoxIC(const std::string & name,
-                InputParameters parameters);
+  SmoothBoxIC(const InputParameters & parameters);
 
   virtual Real value(const Point & p);
 

@@ -23,8 +23,8 @@ InputParameters validParams<AuxBulkEnergyCalphad>()
   return params;
 }
 
-AuxBulkEnergyCalphad::AuxBulkEnergyCalphad(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+AuxBulkEnergyCalphad::AuxBulkEnergyCalphad(const InputParameters & parameters) :
+    AuxKernel(parameters),
     _C(coupledValue("conserved_variable")),
     _n_OP_variables(getParam<unsigned int>("n_OP_variables")),
     _scaling_factor(getParam<Real>("scaling_factor")),

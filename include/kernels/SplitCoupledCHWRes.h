@@ -23,7 +23,7 @@ InputParameters validParams<SplitCoupledCHWRes>();
 class SplitCoupledCHWRes : public SplitCHWRes
 {
 public:
-  SplitCoupledCHWRes(const std::string & name, InputParameters parameters);
+  SplitCoupledCHWRes(const InputParameters & parameters);
 
 protected:
   virtual Real computeQpResidual();

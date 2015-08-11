@@ -17,7 +17,7 @@ class ElementIntegralFreeEnergy :
 //  public MooseVariableInterface
 {
 public:
-  ElementIntegralFreeEnergy(const std::string & name, InputParameters parameters);
+  ElementIntegralFreeEnergy(const InputParameters & parameters);
 
 protected:
   virtual Real computeQpIntegral();

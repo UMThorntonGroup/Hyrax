@@ -28,8 +28,8 @@ InputParameters validParams<AuxNucleationProbability>()
   return params;
 }
 
-AuxNucleationProbability::AuxNucleationProbability(const std::string & name, InputParameters parameters)
-  : AuxKernel(name, parameters),
+AuxNucleationProbability::AuxNucleationProbability(const InputParameters & parameters)
+  : AuxKernel(parameters),
     _coupled_nuc_rate(coupledValue("coupled_aux_var")),
     _n_OP_vars(getParam<int>("n_OP_vars")),
     _OP_threshold(getParam<Real>("OP_threshold"))

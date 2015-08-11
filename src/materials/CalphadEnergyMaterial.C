@@ -31,8 +31,8 @@ InputParameters validParams<CalphadEnergyMaterial>()
   return params;
 }
 
-CalphadEnergyMaterial::CalphadEnergyMaterial(const std::string & name, InputParameters parameters)
-    : Material(name, parameters),
+CalphadEnergyMaterial::CalphadEnergyMaterial(const InputParameters & parameters)
+    : Material(parameters),
       _pure_endpoint_low_coeffs(getParam<std::vector<Real> >("pure_endpoint_low_coeffs")),
       _pure_endpoint_high_coeffs(getParam<std::vector<Real> >("pure_endpoint_high_coeffs")),
       _mixture_coeffs(getParam<std::vector<Real> >("mixture_coeffs")),

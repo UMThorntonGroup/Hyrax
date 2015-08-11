@@ -21,7 +21,7 @@ InputParameters validParams<AuxDFchemDC>();
 class AuxDFchemDC : public AuxKernel
 {
 public:
-    AuxDFchemDC(const std::string & name, InputParameters parameters);
+    AuxDFchemDC(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

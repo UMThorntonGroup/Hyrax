@@ -26,8 +26,8 @@ InputParameters validParams<OPVariantKernelAction>()
   return params;
 }
 
-OPVariantKernelAction::OPVariantKernelAction(const std::string & name, InputParameters params) :
-    Action(name, params),
+OPVariantKernelAction::OPVariantKernelAction(InputParameters params) :
+    Action(params),
     _num_OPs(getParam<unsigned int>("number_OPs")),
     _OP_name_base(getParam<std::string>("OP_name_base")),
     _kappa_name_OP(getParam<std::string>("kappa_name_OP")),

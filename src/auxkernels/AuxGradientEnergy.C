@@ -20,8 +20,8 @@ InputParameters validParams<AuxGradientEnergy>()
   return params;
 }
 
-AuxGradientEnergy::AuxGradientEnergy(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+AuxGradientEnergy::AuxGradientEnergy(const InputParameters & parameters) :
+    AuxKernel(parameters),
     _grad_var(coupledGradient("field_variable")),
     _kappa_name(getParam<std::string>("kappa_name")),
     _kappa(getMaterialProperty<Real>(_kappa_name))

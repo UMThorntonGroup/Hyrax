@@ -25,8 +25,8 @@ InputParameters validParams<ACBulkCoupled>()
   return params;
 }
 
-ACBulkCoupled::ACBulkCoupled(const std::string & name, InputParameters parameters)
-  :ACBulk(name, parameters),
+ACBulkCoupled::ACBulkCoupled(const InputParameters & parameters)
+  :ACBulk(parameters),
    // Get the material properties for the Landau coefficients
    _a2(getMaterialProperty<Real>("A2")),
    _a3(getMaterialProperty<Real>("A3")),

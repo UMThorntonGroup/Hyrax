@@ -21,8 +21,8 @@ InputParameters validParams<AuxDFelDC>()
   return params;
 }
 
-AuxDFelDC::AuxDFelDC(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+AuxDFelDC::AuxDFelDC(const InputParameters & parameters) :
+    AuxKernel(parameters),
     _elasticity_tensor(getMaterialProperty<ElasticityTensorR4>("elasticity_tensor")),
     _elastic_strain(getMaterialProperty<RankTwoTensor>("elastic_strain")),
     _dc_misfit_strain(getMaterialProperty<RankTwoTensor>("dc_misfit_strain"))//,

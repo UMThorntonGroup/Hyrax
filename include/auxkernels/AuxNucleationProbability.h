@@ -27,7 +27,7 @@ InputParameters validParams<AuxNucleationProbability>();
 class AuxNucleationProbability : public AuxKernel
 {
 public:
-  AuxNucleationProbability(const std::string & name, InputParameters params);
+  AuxNucleationProbability(const InputParameters & params);
 
 protected:
   /**

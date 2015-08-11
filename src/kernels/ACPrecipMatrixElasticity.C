@@ -20,8 +20,8 @@ InputParameters validParams<ACPrecipMatrixElasticity>()
   return params;
 }
 
-ACPrecipMatrixElasticity::ACPrecipMatrixElasticity(const std::string & name, InputParameters parameters)
-    : ACBulk(name, parameters),
+ACPrecipMatrixElasticity::ACPrecipMatrixElasticity(const InputParameters & parameters)
+    : ACBulk(parameters),
       _elasticity_tensor(getMaterialProperty<ElasticityTensorR4>("elasticity_tensor")),
       _dn_elasticity_tensor(getMaterialProperty<std::vector<ElasticityTensorR4> >("dn_elasticity_tensor")),
       _dndn_elasticity_tensor(getMaterialProperty<std::vector<ElasticityTensorR4> >("dndn_elasticity_tensor")),

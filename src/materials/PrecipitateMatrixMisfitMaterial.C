@@ -32,9 +32,8 @@ InputParameters validParams<PrecipitateMatrixMisfitMaterial>()
  return params;
 }
 
-PrecipitateMatrixMisfitMaterial::PrecipitateMatrixMisfitMaterial(const std::string & name,
-                                                                 InputParameters parameters) :
-    LinearSingleCrystalPrecipitateMaterial(name, parameters),
+PrecipitateMatrixMisfitMaterial::PrecipitateMatrixMisfitMaterial(const InputParameters & parameters) :
+    LinearSingleCrystalPrecipitateMaterial(parameters),
     _eigenstrain_matrix_vector(getParam<std::vector<Real> >("e_matrix")),
     _eigenstrain_matrix(),
 

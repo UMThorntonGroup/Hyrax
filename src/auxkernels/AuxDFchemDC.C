@@ -22,8 +22,8 @@ InputParameters validParams<AuxDFchemDC>()
   return params;
 }
 
-AuxDFchemDC::AuxDFchemDC(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+AuxDFchemDC::AuxDFchemDC(const InputParameters & parameters) :
+    AuxKernel(parameters),
     _X(coupledValue("concentration")),
     _OP(coupledValue("OP")),
     _Omega(getMaterialProperty<Real>("molar_volume")),
