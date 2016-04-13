@@ -28,8 +28,8 @@ InputParameters validParams<CHPrecipMatrixElasticity>()
 
 CHPrecipMatrixElasticity::CHPrecipMatrixElasticity(const InputParameters & parameters)
     : SplitCHCRes(parameters),
-      _elasticity_tensor(getMaterialProperty<ElasticityTensorR4>("elasticity_tensor")),
-      _dn_elasticity_tensor(getMaterialProperty<std::vector<ElasticityTensorR4> >("dn_elasticity_tensor")),
+      _elasticity_tensor(getMaterialProperty<RankFourTensor>("elasticity_tensor")),
+      _dn_elasticity_tensor(getMaterialProperty<std::vector<RankFourTensor> >("dn_elasticity_tensor")),
       _elastic_strain(getMaterialProperty<RankTwoTensor>("elastic_strain")),
       _dc_misfit_strain(getMaterialProperty<RankTwoTensor>("dc_misfit_strain")),
       _dn_misfit_strain(getMaterialProperty<std::vector<RankTwoTensor> >("dn_misfit_strain")),
