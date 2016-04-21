@@ -13,7 +13,7 @@
 
 #include "ACBulk.h"
 
-#include "ElasticityTensorR4.h"
+#include "RankFourTensor.h"
 #include "RankTwoTensor.h"
 
 #include <string>
@@ -58,7 +58,7 @@ protected:
   //virtual Real calculateSecondJacobianTerm();
 
   // system elasticity tensor, varies in space
-  const MaterialProperty<ElasticityTensorR4> & _elasticity_tensor;
+  const MaterialProperty<RankFourTensor> & _elasticity_tensor;
   const MaterialProperty<std::vector<RankTwoTensor > > & _eigenstrains_rotated_MP;
   const MaterialProperty<RankTwoTensor> & _local_strain;
 

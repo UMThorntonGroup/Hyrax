@@ -12,7 +12,7 @@
 #define CHPRECIPMATRIXELASTICITY_H
 
 #include "SplitCHCRes.h"
-#include "ElasticityTensorR4.h"
+#include "RankFourTensor.h"
 #include "RankTwoTensor.h"
 
 class CHPrecipMatrixElasticity;
@@ -32,8 +32,8 @@ protected:
   virtual Real computeQpOffDiagJacobian(unsigned int jvar);
 
   // system elasticity tensor, varies in space
-  const MaterialProperty<ElasticityTensorR4> & _elasticity_tensor;
-  const MaterialProperty<std::vector<ElasticityTensorR4> > & _dn_elasticity_tensor;
+  const MaterialProperty<RankFourTensor> & _elasticity_tensor;
+  const MaterialProperty<std::vector<RankFourTensor> > & _dn_elasticity_tensor;
 
   const MaterialProperty<RankTwoTensor> & _elastic_strain;
   const MaterialProperty<RankTwoTensor> & _dc_misfit_strain;
